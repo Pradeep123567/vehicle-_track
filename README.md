@@ -9,10 +9,20 @@
   - 4-Wheeler (e.g., car)
   - Heavy Vehicle (e.g., truck, bus)
 - **Tracking Type:** Centroid-based tracker (no direction counting)
-- **Input Video:** Sherbrooke dataset traffic scene
+- **Input Video:** dataset traffic scene
 - **Output:** Annotated video with object IDs and class labels
 
 ---
+## Methodology 
+Dataset Selection: A traffic video is used as input, containing pedestrians and different vehicle types.
+
+Detection Model: YOLOv8s is applied frame by frame to detect objects with bounding boxes and confidence scores.
+
+Category Grouping: Detected classes are grouped into four categories — Person, 2-Wheeler, 4-Wheeler, Heavy Vehicle.
+
+Tracking: A centroid-based tracker assigns and maintains unique IDs across frames for consistency.
+
+Output Generation: Each frame is annotated with bounding boxes, labels, and IDs, and an output video is produced.
 
 ## 🛠️ Tools & Libraries
 
